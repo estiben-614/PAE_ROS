@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 import { ConfigProvider } from "antd";
 import MainLayout from "../MainLayout.jsx";
 import { createBrowserRouter } from "react-router-dom";
+import RosProvider from "./Context/RosProvider.jsx";
 
 // const router = createBrowserRouter([
 //   {
@@ -18,10 +19,12 @@ import { createBrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* <RouterProvider router={router}> */}
+    <RosProvider>
+      {/* <RouterProvider router={router}> */}
       <ConfigProvider>
         <MainLayout />
       </ConfigProvider>
-    {/* </RouterProvider> */}
+      {/* </RouterProvider> */}
+    </RosProvider>
   </React.StrictMode>
 );
