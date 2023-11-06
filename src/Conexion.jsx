@@ -1,6 +1,5 @@
 import { Alert } from "antd";
-import { useContext, useEffect, useState } from "react";
-import ROSLIB from "roslib";
+import { useContext } from "react";
 import { RosContext } from "./Context/RosContext";
 
 const Conexion = ({ tipoRobot }) => {

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { RosContext } from "./RosContext";
 import ROSLIB from "roslib";
+import Config from "../Config/config";
 
 const RosProvider = ({ children }) => {
   const [conexion, setConexion] = useState(false);
@@ -23,7 +24,7 @@ const RosProvider = ({ children }) => {
       console.log("DESCONECTADO");
       setTimeout(() => {
         ros.connect("ws://localhost:9090");
-      }, 5000);
+      }, Config.TIEMPO_RECONEXION);
     });
 
     ros.on("error", (error) => {

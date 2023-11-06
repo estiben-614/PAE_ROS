@@ -1,4 +1,3 @@
-import React from "react";
 import Conexion from "./Conexion";
 import { Row, Typography } from "antd";
 import Teleoperacion from "./Teleoperacion";
