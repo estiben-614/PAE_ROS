@@ -2,6 +2,7 @@ import Conexion from "./Conexion";
 import { Col, Row, Typography } from "antd";
 import Teleoperacion from "./Teleoperacion";
 import RobotState from "./RobotState";
+import Mapa from "./Mapa";
 
 const { Title } = Typography;
 const Turtlebot = () => {
@@ -20,6 +21,9 @@ const Turtlebot = () => {
           <Teleoperacion />
           <RobotState />
 
+        </Col>
+        <Col span={16}>
+            <Mapa />
         </Col>
       </Row>
       <div></div>

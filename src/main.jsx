@@ -18,7 +18,7 @@ import RosProvider from "./Context/RosProvider.jsx";
 // ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <RosProvider>
       {/* <RouterProvider router={router}> */}
       <ConfigProvider>
@@ -26,5 +26,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       </ConfigProvider>
       {/* </RouterProvider> */}
     </RosProvider>
-  </React.StrictMode>
+  // </React.StrictMode>
 );
