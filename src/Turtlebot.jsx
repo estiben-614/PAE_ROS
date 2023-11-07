@@ -1,6 +1,7 @@
 import Conexion from "./Conexion";
-import { Row, Typography } from "antd";
+import { Col, Row, Typography } from "antd";
 import Teleoperacion from "./Teleoperacion";
+import RobotState from "./RobotState";
 
 const { Title } = Typography;
 const Turtlebot = () => {
@@ -9,9 +10,17 @@ const Turtlebot = () => {
       <Row justify="center">
         <Title level={2}>ROBOT CONTROL PAGE</Title>
       </Row>
+
       <Row>
         <Conexion tipoRobot={"Turtlebot 3"} />
-        <Teleoperacion />
+      </Row>
+
+      <Row>
+        <Col span={8}>
+          <Teleoperacion />
+          <RobotState />
+
+        </Col>
       </Row>
       <div></div>
     </>
