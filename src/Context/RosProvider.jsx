@@ -9,7 +9,7 @@ const RosProvider = ({ children }) => {
 
   useEffect(() => {
     const ros = new ROSLIB.Ros({
-      url: "ws://localhost:9090",
+      url: `ws://${Config.ROSBRIDGE_SERVER_IP}:${Config.ROSBRIDGE_SERVER_PORT}`,
     });
     console.log(ros);
     setConexionROS(ros)
@@ -23,7 +23,7 @@ const RosProvider = ({ children }) => {
       setConexion(false);
       console.log("DESCONECTADO");
       setTimeout(() => {
-        ros.connect("ws://localhost:9090");
+        ros.connect(`ws://${Config.ROSBRIDGE_SERVER_IP}:${Config.ROSBRIDGE_SERVER_PORT}`);
       }, Config.TIEMPO_RECONEXION);
     });
 

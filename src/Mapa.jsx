@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-
+import { Component } from "react";
+import Config from "./Config/config";
 class Map extends Component {
   state = {
     ros: null,
@@ -17,13 +17,13 @@ class Map extends Component {
     console.log("Map:" + this.state.ros);
     try {
       this.state.ros.connect(
-        "ws://localhost:9090" 
+        `ws://${Config.ROSBRIDGE_SERVER_IP}:${Config.ROSBRIDGE_SERVER_PORT}` 
       );
     } catch (error) {
       console.log(
-        "ws://localhost:9090" 
+        `ws://${Config.ROSBRIDGE_SERVER_IP}:${Config.ROSBRIDGE_SERVER_PORT}` 
       );
-      console.log("cannot connect to the WS robot. Try again after 1 second");
+      console.log("No se ha logrado una conexión con el robot");
     }
   }
 
@@ -51,7 +51,7 @@ class Map extends Component {
   render() {
     return (
       <div>
-        <div id="nav_div">Viewer</div>
+        <div id="nav_div"></div>
       </div>
     );
   }

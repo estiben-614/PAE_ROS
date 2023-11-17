@@ -17,12 +17,12 @@ const Turtlebot = () => {
       </Row>
 
       <Row>
-        <Col span={8}>
+        <Col span={12}>
           <Teleoperacion />
           <RobotState />
 
         </Col>
-        <Col span={16}>
+        <Col span={12}>
             <Mapa />
         </Col>
       </Row>
