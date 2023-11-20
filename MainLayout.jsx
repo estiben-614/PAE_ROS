@@ -7,12 +7,12 @@ const { Title } = Typography;
 
 const routes = [
   'Trutlebot 3',
-  'Turtlesim'
+  // 'Turtlesim'
 ]
 
 
 const Fv2 = () => (
-  <div>HOLI</div>
+  <div></div>
 )
 // eslint-disable-next-line react/prop-types
 const MainLayout = () => {
